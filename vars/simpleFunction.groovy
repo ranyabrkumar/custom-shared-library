@@ -9,7 +9,7 @@ def call(String env) {
     stage("checkout") {
         echo "checking out the code on ${env} environment"
         echo "current working directory: ${pwd()}"
-        sh 'ls -la'
+        bat 'dir'
     }
     stage("compile") {
         echo "compiling on ${env} environment"
@@ -26,5 +26,4 @@ def call(String env) {
     stage("deploy") {
         echo "deploying on ${env} environment"
     }
-
-} 
+}
